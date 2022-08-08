@@ -1,0 +1,19 @@
+table {
+    border-spacing: 50px 0;
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px .8px rgba(0,0,0,0.3); 
+  }
+  
+  td,
+  th {
+    width: auto;
+  }
+
+  td {
+    padding: 10px 0;
+  }
+
+  .top {
+    border-spacing: 50px 0;
+    border-bottom: solid thin gray;
+  }
