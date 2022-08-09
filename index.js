@@ -4,6 +4,7 @@ async function buildTable() {
     let url = 'https://idme-interview.herokuapp.com/';
     let json = await (await fetch(url)).json();
     console.log(json);
+    //TODO Add Testing for this fetch call
 
 
     // Date formatter.
@@ -26,6 +27,7 @@ async function buildTable() {
     var boldColumn = `<td class="bold">`;
     var icon = `<td class="material-symbols-outlined">more_vert</td>`;
 
+    // Loop through response object to build table
     for (var i = 0; i < json.length; i++) {
         tr = $('<tr/>');
         tr.append(boldColumn + json[i].name + "</td>");
@@ -42,8 +44,8 @@ async function buildTable() {
 buildTable();
 
 // NOTES
-// Better formatting would be to use moment.js
+// Better formatting would be to use moment.js (more flexibility if updated to react)
 // How many Categories? 
 // Food , Technology, Travel, Footwear, Automotive, Apparel, Entertainment
 // Only supporting USD?
-// Language support only English?
+// Only support English?
